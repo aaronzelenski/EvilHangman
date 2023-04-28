@@ -1,0 +1,56 @@
+//        StringBuilder word = new StringBuilder(evilWord);
+//        int count = 0;
+//        for(int i = 0; i < evilWord.length(); i++){
+//          char ch = evilWord.charAt(i);
+//          for(int j = 0; j < guessByPlayer.length(); j++){
+//            if(guessByPlayer.charAt(j) == ch){
+//              count++;
+//              System.out.print("Yes there is  " + count + " " + guessByPlayer + " \n");
+//            }else{
+//              System.out.print("Sorry, there are no " + guessByPlayer + "'s \n");
+//            }
+//          }
+//        }
+
+
+
+
+
+
+//      StringBuilder word = new StringBuilder(evilWord);
+//      int count = 0;
+//      for(int i = 0; i < evilWord.length(); i++){
+//        char ch = evilWord.charAt(i);
+//        for(int j = 0; j < guessByPlayer.length(); j++){
+//          if(guessByPlayer.charAt(j) == ch){
+//            count++;
+//            System.out.print("Yes there is  " + count + " " + guessByPlayer + " \n");
+//          }else{
+//            System.out.print("Sorry, there are no " + guessByPlayer + "'s \n");
+//          if(setProducedbyMakeGuess.size() ==1) {
+//            System.out.print("You Win! The word was: " + evilWord);
+//            playerWon=true;
+//            }
+//          }
+//        }
+//      }
+
+
+
+
+      if (guessByPlayer.length() != 1 || !Character.isLetter(guessByPlayer.charAt(0)) || Character.isWhitespace(guessByPlayer.charAt(0))) {
+        System.out.print("INVALID INPUT\n");
+        continue;
+      }
+      try {
+        setProducedbyMakeGuess = myEvilHangmanGame.makeGuess(guessByPlayer.charAt(0));
+      } catch (GuessAlreadyMadeException e) {
+        System.out.print("You have already used that letter!------- \n");
+        continue;
+      }
+
+
+
+
+
+
